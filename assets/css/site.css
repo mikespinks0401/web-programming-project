@@ -1,0 +1,474 @@
+/* ============================================================
+   site.css — Custom styles for the SJC Philosophy Club website
+   Supplements Bootstrap 5 with brand colors, card styles,
+   navbar blur effect, and theme-aware dark mode overrides.
+   ============================================================ */
+
+/* -----------------------------------------------
+   CSS CUSTOM PROPERTIES (LIGHT MODE)
+   Brand palette and shared design tokens
+----------------------------------------------- */
+:root {
+  --sjc-red: #9d2235;
+  --sjc-red-deep: #7e1a2c;
+  --sjc-gold: #d0a94c;
+  --sjc-cream: #f7f2eb;
+  --sjc-ink: #1d2430;
+  --sjc-muted: #657184;
+  --sjc-border: rgba(29, 36, 48, 0.12);
+  --sjc-surface: rgba(255, 255, 255, 0.88);
+  --sjc-surface-2: #ffffff;
+  --sjc-hero: linear-gradient(
+    135deg,
+    rgba(157, 34, 53, 0.08),
+    rgba(208, 169, 76, 0.14)
+  );
+  --sjc-shadow: 0 20px 60px rgba(23, 31, 45, 0.12);
+  --sjc-radius: 1.25rem;
+}
+
+/* -----------------------------------------------
+   DARK MODE OVERRIDES
+   Adjusts surface colors, borders, and shadows
+   when data-bs-theme="dark" is set on <html>
+----------------------------------------------- */
+[data-bs-theme='dark'] {
+  --sjc-ink: #edf2f7;
+  --sjc-muted: #a8b4c6;
+  --sjc-border: rgba(237, 242, 247, 0.12);
+  --sjc-surface: rgba(21, 28, 39, 0.92);
+  --sjc-surface-2: #151c27;
+  --sjc-hero: linear-gradient(
+    135deg,
+    rgba(157, 34, 53, 0.18),
+    rgba(208, 169, 76, 0.14)
+  );
+  --sjc-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* -----------------------------------------------
+   BASE HTML STYLES
+   Smooth scrolling and radial-gradient background
+----------------------------------------------- */
+html {
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(208, 169, 76, 0.14),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at left center,
+      rgba(157, 34, 53, 0.08),
+      transparent 24%
+    ),
+    var(--sjc-cream);
+  color: var(--sjc-ink);
+}
+
+/* -----------------------------------------------
+   SMOOTH TRANSITION — applies to color-scheme changes
+   on common elements when the theme toggle is switched
+----------------------------------------------- */
+body,
+.form-control,
+.form-select,
+.table,
+.dropdown-menu {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* -----------------------------------------------
+   TYPOGRAPHY — serif headings, sans-serif body text
+----------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+.display-font {
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.02em;
+}
+
+p,
+li,
+.form-control,
+.form-select,
+.btn,
+.table,
+.badge,
+.navbar {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+/* -----------------------------------------------
+   LINKS — brand red with deeper hover state
+----------------------------------------------- */
+a {
+}
+
+a:hover {
+  color: var(--sjc-red-deep);
+}
+
+/* -----------------------------------------------
+   LAYOUT SHELL — ensures full viewport height
+----------------------------------------------- */
+.site-shell {
+  min-height: 100vh;
+}
+
+/* -----------------------------------------------
+   NAVBAR — frosted-glass fixed top bar
+----------------------------------------------- */
+.navbar-blur {
+  backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--sjc-surface) 92%, transparent);
+  border-bottom: 1px solid var(--sjc-border);
+}
+
+/* -----------------------------------------------
+   BRAND / LOGO elements
+----------------------------------------------- */
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand-logo,
+.brand-mark {
+  display: block;
+  object-fit: contain;
+}
+
+.brand-logo {
+  width: 9.25rem;
+  max-width: 38vw;
+}
+
+.brand-mark {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.85rem;
+  padding: 0.2rem;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+[data-bs-theme='dark'] .brand-mark {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.brand-copy small {
+  display: block;
+  color: var(--sjc-muted);
+  line-height: 1.1;
+}
+
+/* -----------------------------------------------
+   CARD COMPONENTS
+   Shared surface, border, shadow, and radius for
+   hero-card, soft-card, spotlight-card, etc.
+----------------------------------------------- */
+.hero-card,
+.soft-card,
+.spotlight-card,
+.table-card,
+.note-card,
+.footer-card {
+  background: var(--sjc-surface);
+  border: 1px solid var(--sjc-border);
+  box-shadow: var(--sjc-shadow);
+  border-radius: var(--sjc-radius);
+}
+
+.hero-card {
+  background: var(--sjc-hero), var(--sjc-surface);
+  overflow: hidden;
+}
+
+/* -----------------------------------------------
+   HERO / PAGE LAYOUT spacing
+----------------------------------------------- */
+.section-space {
+  padding: 5rem 0;
+}
+
+.page-hero {
+  padding-top: 7rem;
+}
+
+/* -----------------------------------------------
+   KICKER — small uppercase label used above headings
+----------------------------------------------- */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sjc-red);
+}
+
+.hero-art {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent),
+    rgba(157, 34, 53, 0.06);
+  border-left: 1px solid var(--sjc-border);
+  min-height: 100%;
+}
+
+.hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -----------------------------------------------
+   METRIC PILL — pill-shaped stat / highlight badges
+----------------------------------------------- */
+.metric-pill {
+  background: var(--sjc-surface-2);
+  border: 1px solid var(--sjc-border);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+}
+
+/* -----------------------------------------------
+   INFO STRIP — highlighted meeting-info banner
+----------------------------------------------- */
+.info-strip {
+  background: linear-gradient(
+    135deg,
+    rgba(157, 34, 53, 0.08),
+    rgba(208, 169, 76, 0.18)
+  );
+  border: 1px solid var(--sjc-border);
+  border-radius: 1.25rem;
+}
+
+/* -----------------------------------------------
+   ICON BADGE — numbered / lettered icon inside cards
+----------------------------------------------- */
+.soft-card .icon-badge,
+.spotlight-card .icon-badge {
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  background: rgba(157, 34, 53, 0.1);
+  color: var(--sjc-red);
+  font-weight: 800;
+}
+
+.note-card {
+  position: sticky;
+  top: 6.25rem;
+  transform: rotate(-1.25deg);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 246, 204, 0.96),
+    rgba(255, 237, 162, 0.95)
+  );
+  color: #2d240e;
+}
+
+[data-bs-theme='dark'] .note-card {
+  background: linear-gradient(
+    180deg,
+    rgba(82, 70, 25, 0.94),
+    rgba(108, 87, 30, 0.96)
+  );
+  color: #fff4cd;
+}
+
+/* -----------------------------------------------
+   TABLE — styled header row using brand color
+----------------------------------------------- */
+.table thead th {
+  background: color-mix(in srgb, var(--sjc-red) 10%, var(--sjc-surface-2));
+  color: var(--sjc-ink);
+  border-bottom-width: 1px;
+}
+
+/* -----------------------------------------------
+   STATUS CHIP / TOPIC CHIP — small badge labels
+----------------------------------------------- */
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(157, 34, 53, 0.12);
+  color: var(--sjc-red);
+  font-weight: 700;
+}
+
+.topic-chip {
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--sjc-border);
+  background: var(--sjc-surface-2);
+  font-weight: 600;
+}
+
+/* -----------------------------------------------
+   VIDEO FRAME — rounded container for the <video> element
+----------------------------------------------- */
+.video-frame {
+  overflow: hidden;
+  border-radius: 1.15rem;
+  border: 1px solid var(--sjc-border);
+  box-shadow: var(--sjc-shadow);
+}
+
+.video-frame video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+
+/* -----------------------------------------------
+   QUOTE BLOCK — left-border pull quote style
+----------------------------------------------- */
+.quote-block {
+  border-left: 4px solid var(--sjc-red);
+  padding-left: 1rem;
+  color: var(--sjc-muted);
+}
+
+/* -----------------------------------------------
+   FORM CONTROLS — consistent surface and focus ring
+----------------------------------------------- */
+.form-control,
+.form-select {
+  background: var(--sjc-surface-2);
+  border-color: var(--sjc-border);
+  color: var(--sjc-ink);
+}
+
+.form-control::placeholder {
+  color: color-mix(in srgb, var(--sjc-muted) 80%, transparent);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(157, 34, 53, 0.45);
+  box-shadow: 0 0 0 0.25rem rgba(157, 34, 53, 0.12);
+  background: var(--sjc-surface-2);
+  color: var(--sjc-ink);
+}
+
+.form-check-input:checked {
+  background-color: var(--sjc-red);
+  border-color: var(--sjc-red);
+}
+
+/* -----------------------------------------------
+   BUTTONS — primary and outline variants use brand red
+----------------------------------------------- */
+.btn-primary {
+  --bs-btn-bg: var(--sjc-red);
+  --bs-btn-border-color: var(--sjc-red);
+  --bs-btn-hover-bg: var(--sjc-red-deep);
+  --bs-btn-hover-border-color: var(--sjc-red-deep);
+  --bs-btn-active-bg: var(--sjc-red-deep);
+  --bs-btn-active-border-color: var(--sjc-red-deep);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--sjc-red);
+  --bs-btn-border-color: rgba(157, 34, 53, 0.35);
+  --bs-btn-hover-bg: var(--sjc-red);
+  --bs-btn-hover-border-color: var(--sjc-red);
+  --bs-btn-hover-color: #fff;
+}
+
+/* -----------------------------------------------
+   IMAGES — aspect-ratio helpers for banners
+----------------------------------------------- */
+.card-image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.page-banner {
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* -----------------------------------------------
+   THINKER BUTTON — philosopher selector on library page
+----------------------------------------------- */
+.thinker-button {
+  text-align: left;
+  border: 1px solid var(--sjc-border);
+  border-radius: 1rem;
+  background: var(--sjc-surface-2);
+  width: 100%;
+}
+
+.thinker-button.active {
+  outline: 2px solid rgba(157, 34, 53, 0.25);
+  border-color: rgba(157, 34, 53, 0.4);
+  box-shadow: 0 14px 28px rgba(157, 34, 53, 0.12);
+}
+
+.footer-card {
+  margin-top: 4rem;
+}
+
+.footer-link-list a {
+  text-decoration: none;
+  color: var(--sjc-muted);
+}
+
+.footer-link-list a:hover {
+  color: var(--sjc-red);
+}
+
+/* -----------------------------------------------
+   UTILITY — muted text color shorthand
+----------------------------------------------- */
+.muted-copy {
+  color: var(--sjc-muted);
+}
+
+/* -----------------------------------------------
+   RESPONSIVE ADJUSTMENTS (≤ 991px / lg breakpoint)
+   Un-stick the note card; remove hero-art left border
+----------------------------------------------- */
+@media (max-width: 991.98px) {
+  .note-card {
+    position: static;
+    transform: none;
+  }
+
+  .hero-art {
+    border-left: 0;
+    border-top: 1px solid var(--sjc-border);
+  }
+}

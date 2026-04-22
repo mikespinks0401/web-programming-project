@@ -1,0 +1,371 @@
+<!doctype html>
+<!-- about.html - About page for the SJC Philosophy Club website -->
+<html lang="en" data-bs-theme="light">
+  <!-- HEAD: metadata, page title, and stylesheet links -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="About page for the San Jac Philosophy Club."
+    />
+    <title>About | SJC Philosophy Club</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <!-- HEADER: fixed top navbar with logo, nav links, theme toggle -->
+      <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-blur">
+          <div class="container py-2">
+            <a class="navbar-brand me-3" href="index.html">
+              <span class="brand-lockup">
+                <img
+                  class="brand-mark"
+                  src="assets/images/sanjac_philosophy_logo_cut.svg"
+                  alt="San Jac Philosophy Club logo"
+                />
+                <span class="brand-copy d-none d-sm-inline-block">
+                  <strong class="display-font d-block fs-5 text-body"
+                    >SJC Philosophy Club</strong
+                  >
+                  <small>Student-led discussion and community</small>
+                </span>
+              </span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#siteNav"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+              <ul
+                class="navbar-nav ms-auto align-items-lg-center gap-lg-2 mb-3 mb-lg-0"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active fw-semibold"
+                    href="about.html"
+                    aria-current="page"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="library.html">Library</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="apply.html">Apply</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <div
+                class="d-lg-flex align-items-center gap-3 ms-lg-4 pt-3 pt-lg-0 border-top border-lg-0 mt-3 mt-lg-0"
+              >
+                <a
+                  href="https://www.sanjac.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="d-inline-flex align-items-center text-decoration-none gap-2"
+                >
+                  <img
+                    class="brand-logo"
+                    src="assets/images/sanjac-logo.svg"
+                    alt="San Jacinto College logo"
+                  />
+                </a>
+                <div
+                  class="form-check form-switch m-0 d-flex align-items-center gap-2"
+                >
+                  <input
+                    class="form-check-input mt-0"
+                    type="checkbox"
+                    role="switch"
+                    id="theme-toggle-about.html"
+                    data-theme-toggle
+                  />
+                  <label
+                    class="form-check-label small text-body-emphasis"
+                    for="theme-toggle-about.html"
+                    data-theme-label
+                    >Light mode</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main id="top">
+        <!-- HERO SECTION: page headline, description, and banner image -->
+        <section class="page-hero section-space">
+          <div class="container">
+            <div class="hero-card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <span class="kicker">About the club</span>
+                  <h1 class="display-6 mt-2 mb-3">
+                    A place to test ideas, not perform certainty.
+                  </h1>
+                  <p class="lead text-body-secondary">
+                    The San Jac Philosophy Club is built around discussion,
+                    reading, and live reasoning. Students don’t need prior
+                    philosophy coursework to join. Curiosity is enough.
+                  </p>
+                  <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a class="btn btn-primary" href="apply.html"
+                      >Get involved</a
+                    >
+                    <a class="btn btn-outline-primary" href="contact.html"
+                      >Ask a question</a
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <img
+                    class="page-banner w-100"
+                    src="assets/images/morhamedufmg-statue-756624_1920.jpg"
+                    alt="Statue used to represent philosophical inquiry and reflection"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- THREE-CARD SECTION: what the club is for, how the room works, who should come -->
+        <section class="pb-5">
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-lg-4">
+                <article class="soft-card h-100 p-4">
+                  <div class="icon-badge mb-3">A</div>
+                  <h2 class="h4">What the club is for</h2>
+                  <p class="muted-copy mb-0">
+                    Big questions, sharper reasoning, and a welcoming place for
+                    students who want more than surface-level conversation.
+                  </p>
+                </article>
+              </div>
+              <div class="col-lg-4">
+                <article class="soft-card h-100 p-4">
+                  <div class="icon-badge mb-3">B</div>
+                  <h2 class="h4">How the room works</h2>
+                  <p class="muted-copy mb-0">
+                    We define terms, challenge assumptions, and make room for
+                    disagreement without turning discussion into noise.
+                  </p>
+                </article>
+              </div>
+              <div class="col-lg-4">
+                <article class="soft-card h-100 p-4">
+                  <div class="icon-badge mb-3">C</div>
+                  <h2 class="h4">Who should come</h2>
+                  <p class="muted-copy mb-0">
+                    Students who like ethics, politics, consciousness,
+                    technology, logic, or simply asking better questions.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CAROUSEL + CONTENT SECTION: image carousel on the left, expectations list on the right -->
+        <section class="pb-5">
+          <div class="container">
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-5 carousel">
+                <!-- Commented-out static image replaced by Bootstrap carousel below -->
+                <!-- <img class="page-banner w-100" src="assets/images/library.jpg" alt="San Jac library interior"> -->
+                <div
+                  id="about-car"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <ul class="carousel-indicators">
+                    <li
+                      data-bs-target="#about-car"
+                      data-bs-slide-to="0"
+                      class="active"
+                    ></li>
+                    <li data-bs-target="#about-car" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#about-car" data-bs-slide-to="2"></li>
+                  </ul>
+
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img class="w-100" src="assets/images/car-1.jpg" alt="" />
+                    </div>
+                    <div class="carousel-item">
+                      <img class="w-100" src="assets/images/car-2.jpg" alt="" />
+                    </div>
+                  </div>
+
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#about-car"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#about-car"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="soft-card p-4 p-lg-5">
+                  <span class="kicker">What students can expect</span>
+                  <h2 class="mt-2 mb-3">
+                    Simple structure. Real conversation.
+                  </h2>
+                  <ul class="mb-0 text-body-secondary fs-5">
+                    <li class="mb-2">
+                      Discussion nights built around a prompt or big question
+                    </li>
+                    <li class="mb-2">
+                      Reading circles using short, approachable texts
+                    </li>
+                    <li class="mb-2">
+                      Guest perspectives from faculty or students
+                    </li>
+                    <li>Open participation. Quiet students are welcome too.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCHEDULE TABLE SECTION: upcoming meeting dates and topics -->
+        <section class="pb-5">
+          <div class="container">
+            <div class="table-card p-4 p-lg-5">
+              <span class="kicker">Meeting schedule</span>
+              <h2 class="mt-2 mb-3">A preview of the club calendar</h2>
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Time</th>
+                      <th>Topic</th>
+                      <th>Location</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Feb 26</td>
+                      <td>5:00 PM</td>
+                      <td>What Makes a Life Meaningful?</td>
+                      <td>South Campus, Room 201</td>
+                      <td><span class="status-chip">Next</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mar 5</td>
+                      <td>5:00 PM</td>
+                      <td>Free Will vs Determinism</td>
+                      <td>South Campus</td>
+                      <td><span class="status-chip">Open</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mar 12</td>
+                      <td>5:00 PM</td>
+                      <td>Reading Circle: Short Text + Discussion</td>
+                      <td>South Campus</td>
+                      <td><span class="status-chip">Open</span></td>
+                    </tr>
+                    <tr>
+                      <td>Mar 19</td>
+                      <td>5:00 PM</td>
+                      <td>Ethics of Artificial Intelligence</td>
+                      <td>South Campus, Room 201</td>
+                      <td><span class="status-chip">Featured</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER: logo, navigation links, and contact links -->
+      <footer class="container pb-5">
+        <div class="footer-card p-4 p-lg-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <div class="brand-lockup mb-3">
+                <img
+                  class="brand-mark"
+                  src="assets/images/sanjac_philosophy_logo_cut.svg"
+                  alt="San Jac Philosophy Club logo"
+                />
+                <div>
+                  <h2 class="h4 mb-1">San Jac Philosophy Club</h2>
+                  <p class="muted-copy mb-0">
+                    Think deeper. Talk smarter. Build community.
+                  </p>
+                </div>
+              </div>
+              <p class="muted-copy mb-0">
+                Student-led philosophy conversations at San Jacinto College,
+                built around curiosity, discussion, and sharper reasoning.
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="h6 text-uppercase muted-copy mb-3">Navigate</h3>
+              <div class="footer-link-list d-grid gap-2">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="library.html">Library</a>
+                <a href="apply.html">Apply</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="h6 text-uppercase muted-copy mb-3">Connect</h3>
+              <div class="footer-link-list d-grid gap-2">
+                <a
+                  href="https://www.sanjac.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >San Jacinto College</a
+                >
+                <a href="contact.html">Club contacts</a>
+                <a href="#top">Back to top</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom site scripts: theme toggle, thinker spotlight -->
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

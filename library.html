@@ -1,0 +1,323 @@
+<!doctype html>
+<!-- library.html - Philosopher spotlight / library page for the SJC Philosophy Club -->
+<html lang="en" data-bs-theme="light">
+  <!-- HEAD: metadata, page title, and stylesheet links -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Library and philosopher spotlight page for the San Jac Philosophy Club."
+    />
+    <title>Library | SJC Philosophy Club</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <!-- HEADER: fixed top navbar with logo, nav links, theme toggle -->
+      <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-blur">
+          <div class="container py-2">
+            <a class="navbar-brand me-3" href="index.html">
+              <span class="brand-lockup">
+                <img
+                  class="brand-mark"
+                  src="assets/images/sanjac_philosophy_logo_cut.svg"
+                  alt="San Jac Philosophy Club logo"
+                />
+                <span class="brand-copy d-none d-sm-inline-block">
+                  <strong class="display-font d-block fs-5 text-body"
+                    >SJC Philosophy Club</strong
+                  >
+                  <small>Student-led discussion and community</small>
+                </span>
+              </span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#siteNav"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+              <ul
+                class="navbar-nav ms-auto align-items-lg-center gap-lg-2 mb-3 mb-lg-0"
+              >
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active fw-semibold"
+                    href="library.html"
+                    aria-current="page"
+                    >Library</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="apply.html">Apply</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <div
+                class="d-lg-flex align-items-center gap-3 ms-lg-4 pt-3 pt-lg-0 border-top border-lg-0 mt-3 mt-lg-0"
+              >
+                <a
+                  href="https://www.sanjac.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="d-inline-flex align-items-center text-decoration-none gap-2"
+                >
+                  <img
+                    class="brand-logo"
+                    src="assets/images/sanjac-logo.svg"
+                    alt="San Jacinto College logo"
+                  />
+                </a>
+                <div
+                  class="form-check form-switch m-0 d-flex align-items-center gap-2"
+                >
+                  <input
+                    class="form-check-input mt-0"
+                    type="checkbox"
+                    role="switch"
+                    id="theme-toggle-library.html"
+                    data-theme-toggle
+                  />
+                  <label
+                    class="form-check-label small text-body-emphasis"
+                    for="theme-toggle-library.html"
+                    data-theme-label
+                    >Light mode</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main id="top">
+        <!-- HERO SECTION: page headline and supporting banner image -->
+        <section class="page-hero section-space">
+          <div class="container">
+            <div class="hero-card p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <span class="kicker">Club library</span>
+                  <h1 class="display-6 mt-2 mb-3">
+                    A preview of ideas worth wrestling with.
+                  </h1>
+                  <p class="lead text-body-secondary">
+                    The original files included a philosopher spotlight. This
+                    version keeps that idea, but presents it in a cleaner
+                    Bootstrap layout with a simple interactive focus panel.
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <img
+                    class="page-banner w-100"
+                    src="assets/images/library.jpg"
+                    alt="Library image representing club resources and reading space"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PHILOSOPHER SPOTLIGHT SECTION: thinker button list on the left, spotlight panel on the right -->
+        <section class="pb-5">
+          <div class="container">
+            <div class="row g-4">
+              <!-- LEFT: clickable thinker buttons (Socrates, Aristotle, Nietzsche) -->
+              <div class="col-lg-4">
+                <div class="d-grid gap-3">
+                  <button
+                    class="thinker-button active p-3"
+                    type="button"
+                    data-thinker-button
+                    data-title="Socrates"
+                    data-image="assets/images/socrates.jpg"
+                    data-alt="Portrait of Socrates"
+                    data-copy="Taught that questioning your own beliefs is part of the path to wisdom."
+                  >
+                    <div class="d-flex gap-3 align-items-center">
+                      <img
+                        src="assets/images/socrates-thumb.jpg"
+                        alt="Socrates thumbnail"
+                        width="72"
+                        height="72"
+                        class="rounded-3 object-fit-cover"
+                      />
+                      <div>
+                        <div class="fw-bold">Socrates</div>
+                        <div class="muted-copy small">
+                          Questioning assumptions
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  <button
+                    class="thinker-button p-3"
+                    type="button"
+                    data-thinker-button
+                    data-title="Aristotle"
+                    data-image="assets/images/aristotle.jpg"
+                    data-alt="Portrait of Aristotle"
+                    data-copy="Focused on reason, virtue, and how to live a balanced life."
+                  >
+                    <div class="d-flex gap-3 align-items-center">
+                      <img
+                        src="assets/images/aristotle-thumb.jpg"
+                        alt="Aristotle thumbnail"
+                        width="72"
+                        height="72"
+                        class="rounded-3 object-fit-cover"
+                      />
+                      <div>
+                        <div class="fw-bold">Aristotle</div>
+                        <div class="muted-copy small">
+                          Virtue and practical wisdom
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                  <button
+                    class="thinker-button p-3"
+                    type="button"
+                    data-thinker-button
+                    data-title="Nietzsche"
+                    data-image="assets/images/nietzsche.jpg"
+                    data-alt="Portrait of Nietzsche"
+                    data-copy="Challenged people to create meaning instead of blindly following the crowd."
+                  >
+                    <div class="d-flex gap-3 align-items-center">
+                      <img
+                        src="assets/images/nietzsche-thumb.jpg"
+                        alt="Nietzsche thumbnail"
+                        width="72"
+                        height="72"
+                        class="rounded-3 object-fit-cover"
+                      />
+                      <div>
+                        <div class="fw-bold">Nietzsche</div>
+                        <div class="muted-copy small">
+                          Meaning and self-creation
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <!-- RIGHT: spotlight panel — image and copy update via JS when a thinker button is clicked -->
+              <div class="col-lg-8">
+                <article class="spotlight-card p-4 p-lg-5 h-100">
+                  <span class="kicker">Philosopher spotlight</span>
+                  <h2 class="mt-2 mb-4" data-thinker-title>Socrates</h2>
+                  <div class="row g-4 align-items-center">
+                    <div class="col-lg-6">
+                      <img
+                        class="w-100 page-banner"
+                        src="assets/images/socrates.jpg"
+                        alt="Portrait of Socrates"
+                        data-thinker-image
+                      />
+                    </div>
+                    <div class="col-lg-6">
+                      <p
+                        class="fs-5 text-body-secondary mb-4"
+                        data-thinker-copy
+                      >
+                        Taught that questioning your own beliefs is part of the
+                        path to wisdom.
+                      </p>
+                      <div class="soft-card p-4">
+                        <h3 class="h5">Why this matters for the club</h3>
+                        <p class="muted-copy mb-0">
+                          The point is not to memorize names. It is to learn how
+                          thinkers approached questions and then bring that
+                          energy into live discussion.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER: logo, navigation links, and contact links -->
+      <footer class="container pb-5">
+        <div class="footer-card p-4 p-lg-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <div class="brand-lockup mb-3">
+                <img
+                  class="brand-mark"
+                  src="assets/images/sanjac_philosophy_logo_cut.svg"
+                  alt="San Jac Philosophy Club logo"
+                />
+                <div>
+                  <h2 class="h4 mb-1">San Jac Philosophy Club</h2>
+                  <p class="muted-copy mb-0">
+                    Think deeper. Talk smarter. Build community.
+                  </p>
+                </div>
+              </div>
+              <p class="muted-copy mb-0">
+                Student-led philosophy conversations at San Jacinto College,
+                built around curiosity, discussion, and sharper reasoning.
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="h6 text-uppercase muted-copy mb-3">Navigate</h3>
+              <div class="footer-link-list d-grid gap-2">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="library.html">Library</a>
+                <a href="apply.html">Apply</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="h6 text-uppercase muted-copy mb-3">Connect</h3>
+              <div class="footer-link-list d-grid gap-2">
+                <a
+                  href="https://www.sanjac.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >San Jacinto College</a
+                >
+                <a href="mailto:spinks.m615183@stu.sanjac.edu"
+                  >Michael Spinks</a
+                >
+                <a href="contact.html">Club contacts</a>
+                <a href="#top">Back to top</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom site scripts: theme toggle, thinker spotlight -->
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

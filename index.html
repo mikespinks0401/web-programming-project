@@ -1,0 +1,506 @@
+<!doctype html>
+<!-- index.html - Home page for the SJC Philosophy Club website -->
+<html lang="en" data-bs-theme="light">
+  <!-- HEAD: metadata, page title, and stylesheet links -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Bootstrap homepage for the San Jac Philosophy Club with video, schedule table, contact form, sticky note, and theme switch."
+    />
+    <title>Home | SJC Philosophy Club</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <!-- HEADER: fixed top navbar with logo, nav links, theme toggle -->
+      <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-blur">
+          <div class="container py-2">
+            <a class="navbar-brand me-3" href="index.html">
+              <span class="brand-lockup">
+                <img
+                  class="brand-mark"
+                  src="assets/images/sanjac_philosophy_logo_cut.svg"
+                  alt="San Jac Philosophy Club logo"
+                />
+                <span class="brand-copy d-none d-sm-inline-block">
+                  <strong class="display-font d-block fs-5 text-body"
+                    >SJC Philosophy Club</strong
+                  >
+                  <small>Student-led discussion and community</small>
+                </span>
+              </span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#siteNav"
+              aria-controls="siteNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+              <ul
+                class="navbar-nav ms-auto align-items-lg-center gap-lg-2 mb-3 mb-lg-0"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active fw-semibold"
+                    href="index.html"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="library.html">Library</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="apply.html">Apply</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <div
+                class="d-lg-flex align-items-center gap-3 ms-lg-4 pt-3 pt-lg-0 border-top border-lg-0 mt-3 mt-lg-0"
+              >
+                <a
+                  href="https://www.sanjac.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="d-inline-flex align-items-center text-decoration-none gap-2"
+                >
+                  <img
+                    class="brand-logo"
+                    src="assets/images/sanjac-logo.svg"
+                    alt="San Jacinto College logo"
+                  />
+                </a>
+                <div
+                  class="form-check form-switch m-0 d-flex align-items-center gap-2"
+                >
+                  <input
+                    class="form-check-input mt-0"
+                    type="checkbox"
+                    role="switch"
+                    id="theme-toggle-index.html"
+                    data-theme-toggle
+                  />
+                  <label
+                    class="form-check-label small text-body-emphasis"
+                    for="theme-toggle-index.html"
+                    data-theme-label
+                    >Light mode</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main id="top">
+        <!-- HERO SECTION: headline, call-to-action buttons, and Socrates image -->
+        <section class="page-hero section-space">
+          <div class="container">
+            <!-- Hero card: text on the left (col-lg-7), image on the right (col-lg-5) -->
+            <div class="hero-card">
+              <div class="row g-0 align-items-stretch">
+                <div class="col-lg-7 p-4 p-md-5 p-xl-5">
+                  <span class="kicker mb-3"
+                    >Student-led philosophy at San Jac</span
+                  >
+                  <h1 class="display-5 mb-3">
+                    Think deeper. Talk smarter. Build community.
+                  </h1>
+                  <p class="lead text-body-secondary mb-4">
+                    We’re a student-led group at San Jacinto College that meets
+                    to discuss big questions, sharpen reasoning, and explore
+                    ideas from ethics and politics to consciousness and AI.
+                  </p>
+                  <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a class="btn btn-primary btn-lg" href="apply.html"
+                      >Join the club</a
+                    >
+                    <a class="btn btn-outline-primary btn-lg" href="#schedule"
+                      >Next meeting details</a
+                    >
+                  </div>
+                  <div class="row g-3 mt-2">
+                    <div class="col-sm-4">
+                      <div class="metric-pill">Discussion nights</div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="metric-pill">Reading circles</div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="metric-pill">Guest talks</div>
+                    </div>
+                  </div>
+                  <p class="quote-block mt-4 mb-0">
+                    No experience needed. Show up, listen, and speak up when
+                    you’re ready. Bring curiosity, not the “right” answer.
+                  </p>
+                </div>
+                <div class="col-lg-5 hero-art">
+                  <img
+                    src="assets/images/socrates.png"
+                    alt="Illustration of Socrates representing philosophy and inquiry"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INFO STRIP: next meeting date, location, topic, and RSVP button -->
+        <section class="pb-5">
+          <div class="container">
+            <div class="info-strip p-4 p-lg-5">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-3">
+                  <span class="kicker">Next meeting</span>
+                  <div class="h4 mt-2 mb-0">Thursday • Feb 26 • 5:00 PM</div>
+                </div>
+                <div class="col-lg-3">
+                  <span class="kicker">Location</span>
+                  <div class="h4 mt-2 mb-0">South Campus • Room 201</div>
+                </div>
+                <div class="col-lg-4">
+                  <span class="kicker">Topic</span>
+                  <div class="h4 mt-2 mb-0">
+                    Ethics of AI: Where do we draw the line?
+                  </div>
+                </div>
+                <div class="col-lg-2 text-lg-end">
+                  <a class="btn btn-primary w-100 w-lg-auto" href="#join-form"
+                    >RSVP / Join</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MAIN CONTENT AREA: left column (activities, video, schedule, form) + right sidebar -->
+        <section class="pb-5">
+          <div class="container">
+            <div class="row g-4">
+              <!-- LEFT COLUMN (col-lg-8): club activities, topics, video, schedule table, join form -->
+              <div class="col-lg-8">
+                <div class="row g-4">
+                  <div class="col-12">
+                    <div
+                      class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-3"
+                    >
+                      <div>
+                        <span class="kicker">What we do</span>
+                        <h2 class="mt-2 mb-2">
+                          Simple structure, real conversation.
+                        </h2>
+                        <p class="muted-copy mb-0">
+                          You leave sharper than you arrived.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <article class="soft-card h-100 p-4">
+                      <div class="icon-badge mb-3">01</div>
+                      <h3 class="h4">Discussion nights</h3>
+                      <p class="muted-copy mb-0">
+                        Guided prompts, open debate, and respectful
+                        disagreement.
+                      </p>
+                    </article>
+                  </div>
+                  <div class="col-md-4">
+                    <article class="soft-card h-100 p-4">
+                      <div class="icon-badge mb-3">02</div>
+                      <h3 class="h4">Reading circles</h3>
+                      <p class="muted-copy mb-0">
+                        Short readings, not textbooks, then a breakdown
+                        together.
+                      </p>
+                    </article>
+                  </div>
+                  <div class="col-md-4">
+                    <article class="soft-card h-100 p-4">
+                      <div class="icon-badge mb-3">03</div>
+                      <h3 class="h4">Guest talks</h3>
+                      <p class="muted-copy mb-0">
+                        Faculty and students share ideas, then the room tests
+                        them.
+                      </p>
+                    </article>
+                  </div>
+
+                  <div class="col-12 pt-2">
+                    <span class="kicker">Topics we explore</span>
+                    <h2 class="mt-2 mb-3">Breadth over repetition.</h2>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="topic-chip">Mind &amp; Consciousness</span>
+                      <span class="topic-chip">Ethics</span>
+                      <span class="topic-chip">Existentialism</span>
+                      <span class="topic-chip">Philosophy of Religion</span>
+                      <span class="topic-chip">Political Philosophy</span>
+                      <span class="topic-chip">Logic &amp; Reasoning</span>
+                      <span class="topic-chip">AI &amp; Technology</span>
+                      <span class="topic-chip">Stoicism</span>
+                    </div>
+                  </div>
+
+                  <div class="col-12 pt-2">
+                    <div class="row g-4 align-items-center">
+                      <div class="col-xl-7">
+                        <span class="kicker">Club video</span>
+                        <h2 class="mt-2 mb-3">Meeting snapshot</h2>
+                        <div class="video-frame">
+                          <video controls poster="assets/images/clubImage.jpg">
+                            <source
+                              src="assets/media/drakes-tech-tips.mp4"
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video element.
+                          </video>
+                        </div>
+                      </div>
+                      <div class="col-xl-5">
+                        <article class="soft-card h-100 p-4">
+                          <h3 class="h4">How meetings work</h3>
+                          <p class="muted-copy">
+                            We start with a prompt, define terms, and argue
+                            positions with reasons. No one is forced to talk.
+                            Listening still counts as learning.
+                          </p>
+                          <ul class="mb-0 text-body-secondary">
+                            <li>
+                              Open to students who are curious, new, or already
+                              deep into philosophy
+                            </li>
+                            <li>
+                              Short readings and concrete prompts keep things
+                              moving
+                            </li>
+                            <li>
+                              Respectful disagreement is expected, not avoided
+                            </li>
+                          </ul>
+                        </article>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- SCHEDULE TABLE: upcoming meeting dates, topics, and locations -->
+                  <div class="col-12 pt-3" id="schedule">
+                    <div class="table-card p-4 p-lg-5">
+                      <div
+                        class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-3"
+                      >
+                        <div>
+                          <span class="kicker">Schedule</span>
+                          <h2 class="mt-2 mb-2">
+                            San Jac Philosophy Club meetings
+                          </h2>
+                          <p class="muted-copy mb-0">
+                            Keep it simple. Show up. If you’re quiet the first
+                            time, that’s normal.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table align-middle mb-0">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Time</th>
+                              <th>Topic</th>
+                              <th>Location</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Feb 26</td>
+                              <td>5:00 PM</td>
+                              <td>What Makes a Life Meaningful?</td>
+                              <td>South Campus, Room 201</td>
+                              <td><span class="status-chip">Next</span></td>
+                            </tr>
+                            <tr>
+                              <td>Mar 5</td>
+                              <td>5:00 PM</td>
+                              <td>Free Will vs Determinism</td>
+                              <td>South Campus</td>
+                              <td><span class="status-chip">Open</span></td>
+                            </tr>
+                            <tr>
+                              <td>Mar 12</td>
+                              <td>5:00 PM</td>
+                              <td>Reading Circle: Short Text + Discussion</td>
+                              <td>South Campus</td>
+                              <td><span class="status-chip">Open</span></td>
+                            </tr>
+                            <tr>
+                              <td>Mar 19</td>
+                              <td>5:00 PM</td>
+                              <td>Ethics of Artificial Intelligence</td>
+                              <td>South Campus, Room 201</td>
+                              <td><span class="status-chip">Featured</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- JOIN FORM: name, email, and optional message to sign up for meeting updates -->
+                  <div class="col-12 pt-3" id="join-form">
+                    <div class="soft-card p-4 p-lg-5">
+                      <span class="kicker">Contact form</span>
+                      <h2 class="mt-2 mb-2">Join the club</h2>
+                      <p class="muted-copy">
+                        We’ll send meeting reminders and topic updates. No spam.
+                      </p>
+                      <form class="row g-3 mt-1" action="#" method="post">
+                        <div class="col-md-6">
+                          <label class="form-label" for="home-name">Name</label>
+                          <input
+                            class="form-control form-control-lg"
+                            id="home-name"
+                            name="name"
+                            type="text"
+                            placeholder="Your name"
+                          />
+                        </div>
+                        <div class="col-md-6">
+                          <label class="form-label" for="home-email"
+                            >Email</label
+                          >
+                          <input
+                            class="form-control form-control-lg"
+                            id="home-email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                          />
+                        </div>
+                        <div class="col-12">
+                          <label class="form-label" for="home-message"
+                            >Optional: What topics interest you?</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="home-message"
+                            name="message"
+                            rows="5"
+                            placeholder="Ethics, AI, Stoicism, politics, and more"
+                          ></textarea>
+                        </div>
+                        <div
+                          class="col-12 d-flex flex-wrap gap-3 align-items-center"
+                        >
+                          <button class="btn btn-primary btn-lg" type="submit">
+                            Join
+                          </button>
+                          <span class="muted-copy small"
+                            >For class projects, the form can stay layout-only
+                            with action="#".</span
+                          >
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- RIGHT SIDEBAR (col-lg-4): sticky note with a quick call to action -->
+              <div class="col-lg-4">
+                <aside class="note-card p-4">
+                  <div class="small text-uppercase fw-bold mb-2">
+                    Sticky note
+                  </div>
+                  <h2 class="h3">Quick note</h2>
+                  <p class="mb-3">
+                    No experience needed. Come listen first. Philosophy gets
+                    better when people bring honest questions, not polished
+                    answers.
+                  </p>
+                  <a class="btn btn-dark" href="apply.html">Apply now</a>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER: logo, navigation links, and contact links -->
+      <footer class="container pb-5">
+        <div class="footer-card p-4 p-lg-5">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <div class="brand-lockup mb-3">
+                <img
+                  class="brand-mark"
+                  src="assets/images/sanjac_philosophy_logo_cut.svg"
+                  alt="San Jac Philosophy Club logo"
+                />
+                <div>
+                  <h2 class="h4 mb-1">San Jac Philosophy Club</h2>
+                  <p class="muted-copy mb-0">
+                    Think deeper. Talk smarter. Build community.
+                  </p>
+                </div>
+              </div>
+              <p class="muted-copy mb-0">
+                Student-led philosophy conversations at San Jacinto College,
+                built around curiosity, discussion, and sharper reasoning.
+              </p>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="h6 text-uppercase muted-copy mb-3">Navigate</h3>
+              <div class="footer-link-list d-grid gap-2">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="library.html">Library</a>
+                <a href="apply.html">Apply</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <h3 class="h6 text-uppercase muted-copy mb-3">Connect</h3>
+              <div class="footer-link-list d-grid gap-2">
+                <a
+                  href="https://www.sanjac.edu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >San Jacinto College</a
+                >
+                <a href="mailto:spinks.m615183@stu.sanjac.edu"
+                  >Michael Spinks</a
+                >
+                <a href="contact.html">Club contacts</a>
+                <a href="#top">Back to top</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS bundle (includes Popper) -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom site scripts: theme toggle, thinker spotlight -->
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
